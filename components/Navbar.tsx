@@ -9,6 +9,7 @@ const Navbar = () => {
         <Link className='text-lg hover:text-indigo-600 cursor-pointer'href='/contact'>Contact</Link>
         <Link href='/counter'className='text-lg hover:text-indigo-600 cursor-pointer'>Counter</Link>
         <Link href='/tours' className='text-lg hover:text-indigo-600 cursor-pointer'>Tours</Link>
+        <Link href='/actions' className='text-lg hover:text-indigo-600 cursor-pointer'>Actions</Link>
 
         </div>
     </nav>
