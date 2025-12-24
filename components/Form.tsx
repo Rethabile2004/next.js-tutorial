@@ -4,15 +4,16 @@ import { log } from 'console'
 import React from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 
-function SubmitButton() {
+ function  SubmitButton() {
+    // 'use client'
     const { pending } = useFormStatus()
+    // const users=await fetch('api/users')
+    // console.log(users);
+    
     return (
         <button type='submit' className='bg-blue-500 rounded border-none py-3 text-white hover:bg-blue-700' disabled={pending}>{pending ? 'submitting...' : 'submit'}</button>
     )
 }
-
-// const [message,formAction]=useFormState(createUser,null);
-
 const Form = () => {
     return (
         <div>
