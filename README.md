@@ -1,36 +1,171 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Next.js Course Practice Repository
+
+This repository contains all exercises, examples, and mini-projects completed while following a Next.js (App Router + TypeScript) Udemy course.
+
+The goal of this repo is to document my learning progress and serve as a reference for core Next.js concepts such as:
+
+- Server Components vs Client Components  
+- Server Actions  
+- Route Handlers  
+- Middleware  
+- Data fetching & caching  
+- Dynamic routing  
+- Forms & mutations  
+- Production builds  
+
+Each section of the project corresponds to a lesson or concept covered in the course.
+
+---
+
+## Screenshots
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/0eb7c397-6130-4f72-883b-55b0015b0617" />
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/01648169-fc57-483a-a22f-5f8f0da23733" />
+<img width="1916" height="1013" alt="image" src="https://github.com/user-attachments/assets/0308567d-e222-40e4-b74d-dbb7ba824250" />
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/e9982f1a-f67c-40e1-a8e9-7a47c32a82c5" />
+
+---
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and navigate to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app will automatically reload as you make changes.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## What This Project Covers
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This repository includes practical implementations of:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Next.js Fundamentals
+- App Router structure  
+- Layouts and nested routes  
+- Dynamic routes  
+- Metadata and fonts  
 
-## Deploy on Vercel
+### Server & Client Components
+- When to use Server vs Client components  
+- Data fetching in Server Components  
+- Component boundaries and best practices  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Data Fetching & Caching
+- Static vs dynamic rendering  
+- `fetch()` caching behavior  
+- Revalidation strategies  
+- Build-time vs runtime data  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Server Actions
+- Form submissions without API routes  
+- Mutations using server actions  
+- `useFormStatus` & `useFormState`  
+- Revalidating paths after mutations  
+
+### Route Handlers (API Routes)
+- GET and POST handlers  
+- Request & response handling  
+- Using `NextRequest` and `NextResponse`  
+- Testing with Thunder Client  
+
+### Middleware
+- Middleware setup  
+- Route matching  
+- Redirecting users  
+- Basic access control logic  
+
+### Production Build
+```bash
+npm run build
+npm start
+```
+- Static vs dynamic routes  
+- Understanding caching behavior  
+
+---
+
+## Project Structure
+
+```
+.
+├── app/
+│   ├── actions/          # Server actions
+│   ├── api/              # Route handlers
+│   ├── components/       # Reusable components
+│   ├── layout.tsx        # Root layout
+│   ├── page.tsx          # Home page
+│   └── ...
+│
+├── middleware.ts         # Middleware logic
+├── public/               # Static assets
+├── README.md
+└── package.json
+```
+
+---
+
+## Testing & Development
+
+During development:
+
+```bash
+npm run dev
+```
+
+For production testing:
+
+```bash
+npm run build
+npm start
+```
+
+This simulates how the app behaves when deployed.
+
+---
+
+## Deployment
+
+This project is designed to work perfectly with Vercel, the official Next.js hosting platform.
+
+For deployment:
+1. Push to GitHub  
+2. Import into Vercel  
+3. Deploy  
+
+### Documentation
+[Next.js Deployment Guide](https://nextjs.org/docs/app/building-your-application/deploying)
+
+---
+
+## Learning Resources
+
+- Next.js Documentation  
+- Next.js App Router Guide  
+- Vercel Platform  
+- Udemy – Next.js Course  
+
+---
+
+## Purpose of This Repository
+
+- Practice modern Next.js  
+- Understand real-world app structure  
+- Learn server actions & caching  
+- Prepare for production-level projects  
+- Serve as a reference for future projects  
+```
