@@ -1,10 +1,8 @@
-'use client'
-const error = (error:Error) => {
-    console.log(error.message);
-    
-  return (
-    <div>There was an error</div>
-  )
-}
+'use client';
 
-export default error
+function error({ error }: { error: Error }) {
+  console.log(error);
+
+  return <div>there was an error...</div>;
+}
+export default error;

@@ -1,11 +1,11 @@
-
-const ToursLayout = ({children}:{children:React.ReactNode}) => {
+function ToursLayout({ children }: { children: React.ReactNode }) {
   return (
-    <section>
-        <h1 className="bg-gray-300 p-4 text-3xl">Tours Page</h1>
-        {children}
-    </section>
-  )
+    <div>
+      <header className='py-2 w-1/2 bg-slate-500 rounded mb-4'>
+        <h1 className='text-3xl text-white text-center'>Nested Layout</h1>
+      </header>
+      {children}
+    </div>
+  );
 }
-
-export default ToursLayout
+export default ToursLayout;

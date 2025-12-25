@@ -1,13 +1,11 @@
-import Counter from './Counter'
+import Counter from '@/components/Counter';
 
-const CounterPage = () => {
-
+function CounterPage() {
   return (
     <section>
-        <h2>Counter App</h2>
-        <Counter/>
+      <h1 className='text-6xl mb-16'>Page Content</h1>
+      <Counter />
     </section>
-  )
+  );
 }
-
-export default CounterPage
+export default CounterPage;

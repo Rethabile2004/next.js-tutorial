@@ -1,11 +1,12 @@
-import Form from "@/components/Form";
-import UserList from "@/components/UserList";
+import Form from '@/components/Form';
+import UsersList from '@/components/UsersList';
 
-export default function Actions() {
+function ActionsPage() {
   return (
-    <section className="grid md:grid-cols-2 gap-3 p-3">
+    <>
       <Form />
-      <UserList />
-    </section>
-  )
+      <UsersList />
+    </>
+  );
 }
+export default ActionsPage;

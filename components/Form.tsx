@@ -1,32 +1,45 @@
-'use client'
-import { createUser } from '@/app/actions/actions'
-import { log } from 'console'
-import React from 'react'
-import { useFormState, useFormStatus } from 'react-dom'
+'use client';
+import { useFormState, useFormStatus } from 'react-dom';
 
- function  SubmitButton() {
-    // 'use client'
-    const { pending } = useFormStatus()
-    // const users=await fetch('api/users')
-    // console.log(users);
-    
-    return (
-        <button type='submit' className='bg-blue-500 rounded border-none py-3 text-white hover:bg-blue-700' disabled={pending}>{pending ? 'submitting...' : 'submit'}</button>
-    )
+import { createUser } from '@/utils/actions';
+
+const SubmitButton = () => {
+  const { pending } = useFormStatus();
+  return (
+    <button type='submit' className={btnStyle} disabled={pending}>
+      {pending ? 'submitting...' : 'submit'}
+    </button>
+  );
+};
+
+function Form() {
+  const [message, formAction] = useFormState(createUser, null);
+  return (
+    <form action={formAction} className={formStyle}>
+      {message && <p>{message}</p>}
+      <h2 className='text-2xl capitalize mb-4'>create user</h2>
+      <input
+        type='text'
+        name='firstName'
+        defaultValue='peter'
+        required
+        className={inputStyle}
+      />
+      <input
+        type='text'
+        name='lastName'
+        defaultValue='smith'
+        required
+        className={inputStyle}
+      />
+      <SubmitButton />
+    </form>
+  );
 }
-const Form = () => {
-    return (
-        <div>
-            <form action={createUser} className='max-w-lg flex flex-col gap-4 bg-white rounded shadow p-6 mx-auto mt-3'>
-                {/* {message&&<p>{message}</p>} */}
-                <h2 className=' align capitalize'>Please enter your information</h2>
-                <input type="text" name='firstName' defaultValue='rethabile' className='rounded border px-2 py-3 text-gray-600 shadow' />
-                <input type="text" name='lastName' defaultValue='siase' className='rounded border px-2 py-3 text-gray-600 shadow' />
-                <SubmitButton />
-            </form>
 
-        </div>
-    )
-}
+const formStyle = 'max-w-lg flex flex-col gap-y-4  shadow rounded p-8';
+const inputStyle = 'border shadow rounded py-2 px-3 text-gray-700';
+const btnStyle =
+  'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded capitalize';
 
-export default Form
+export default Form;
